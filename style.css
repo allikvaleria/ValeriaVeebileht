@@ -1,0 +1,111 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffffcc 0%, #ff99cc 100%); 
+}
+
+header, footer {
+    color: #725C3F; 
+    background: linear-gradient(to top, #ffffcc 0%, #ff99cc 100%); 
+    width: 98%;
+    text-align: center;
+    border: dotted 3pt white;
+    border-radius: 100px;
+    padding: 1%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование секций */
+    padding: 10px;
+}
+
+main section {
+    background-color: #ffffcc;
+    border: double 5pt white;
+    margin: 10px auto;  /* Уменьшены внешние отступы */
+    width: 50%;  /* Уменьшена ширина секции */
+    text-align: left;
+    padding: 3%;  /* Уменьшены внутренние отступы */
+    text-decoration: underline;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+
+h2 {
+    color: #725C3F;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Обеспечивает растяжение на всю ширину секции */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #725C3F;
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+}
+
+nav li {
+    flex-grow: 1; 
+}
+
+nav li a {
+    display: block;
+    color: #EFE8D8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+}
+
+nav li a:hover {
+    background-color: #EDDAD4;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    width: 45%; /* Задаем каждому блоку 45% ширины, чтобы они помещались на одной строке */
+}
