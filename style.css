@@ -1,0 +1,158 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffffcc 0%, #ff99cc 100%);
+}
+
+header, footer {
+    color: #725C3F;
+    background: linear-gradient(to top, #ffffcc 0%, #ff99cc 100%);
+    width: 98%;
+    text-align: center;
+    border: dotted 3pt white;
+    border-radius: 100px;
+    padding: 1%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+main section {
+    margin: 10px auto;
+    width: 50%;
+    text-align: left;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: #725C3F;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Контейнер для секций */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;  /* Это позволит колонкам переходить на новую строку на мобильных устройствах */
+}
+
+/* Левый и правый блоки */
+.left-column, .right-column {
+    width: 48%;  /* Ширина каждой колонки */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-column:hover, .right-column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* MVP и Remote Repo блоки */
+.mvp, .remote-repo {
+    width: 48%;  /* Ширина блоков */
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffcc;
+    border: 2px solid #725C3F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvp:hover, .remote-repo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .mvp {
+        width: 100%;
+    }
+}
+
+.left-column, .right-column {
+    background-color: #ffffcc;
+    border: 2px solid #725C3F;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #725C3F;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav li {
+    flex-grow: 1;
+}
+
+nav li a {
+    display: block;
+    color: #EFE8D8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #EDDAD4;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
